@@ -1,0 +1,10 @@
+from django.urls import path
+from .views import RegisterView, WalletView, DepositView, PaymentView, TransactionHistoryView
+
+urlpatterns = [
+    path('register/', RegisterView.as_view()),
+    path('wallet/', WalletView.as_view()),
+    path('deposit/', DepositView.as_view()),
+    path('pay/', PaymentView.as_view()),
+    path('transactions/', TransactionHistoryView.as_view()),
+]
